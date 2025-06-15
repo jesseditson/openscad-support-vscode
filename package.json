@@ -151,6 +151,8 @@
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
+        "prepackage": "npm run compile",
+        "package": "npx @vscode/vsce package --pre-release",
         "lint": "eslint -c .eslintrc.json --ext .ts src",
         "compile": "tsc -p ./ && node esbuild.mjs",
         "format": "prettier --config .prettierrc.json --write ./src/**/*.ts && eslint -c .eslintrc.json --ext .ts src --fix",
